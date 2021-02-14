@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "No": "http://cio-context.fiware-testbed.jp/dataset#No",
+        "備考": "http://cio-context.fiware-testbed.jp/dataset#備考",
+        "全国地方公共団体コード": "http://cio-context.fiware-testbed.jp/dataset#全国地方公共団体コード",
+        "公表_年月日": "http://cio-context.fiware-testbed.jp/dataset#公表_年月日",
+        "市区町村名": "http://cio-context.fiware-testbed.jp/dataset#市区町村名",
+        "患者_居住地": "http://cio-context.fiware-testbed.jp/dataset#患者_居住地",
+        "患者_年代": "http://cio-context.fiware-testbed.jp/dataset#患者_年代",
+        "患者_性別": "http://cio-context.fiware-testbed.jp/dataset#患者_年代",
+        "患者_渡航歴の有無フラグ": "http://cio-context.fiware-testbed.jp/dataset#患者_渡航歴の有無フラグ",
+        "患者_状態": "http://cio-context.fiware-testbed.jp/dataset#患者_職業",
+        "患者_症状": "http://cio-context.fiware-testbed.jp/dataset#患者_症状",
+        "患者_職業": "http://cio-context.fiware-testbed.jp/dataset#患者_職業",
+        "患者_退院済フラグ": "http://cio-context.fiware-testbed.jp/dataset#患者_退院済フラグ",
+        "発症_年月日": "http://cio-context.fiware-testbed.jp/dataset#発症_年月日",
+        "都道府県名": "http://cio-context.fiware-testbed.jp/dataset#都道府県名",
+        "陽性患者属性": "https://cio-context.fiware-testbed.jp/dataset#陽性患者属性"
+    }
+}

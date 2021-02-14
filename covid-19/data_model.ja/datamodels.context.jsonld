@@ -1,0 +1,353 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "No": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#No",
+            "@type": "xsd:string"
+        },
+        "お問い合わせ先": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#お問い合わせ先",
+            "@type": "xsd:string"
+        },
+        "キーワード": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#キーワード",
+            "@type": "xsd:string"
+        },
+        "コールセンター相談件数": "https://cio-context.fiware-testbed.jp/dataset#コールセンター相談件数",
+        "サブタイトル（通称）": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#サブタイトル（通称）サブタイトル（通称）",
+            "@type": "xsd:string"
+        },
+        "タイトル（制度名）": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#タイトル（制度名）",
+            "@type": "xsd:string"
+        },
+        "備考": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "元制度番号": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#元制度番号",
+            "@type": "xsd:string"
+        },
+        "全国地方公共団体コード": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#全国地方公共団体コード",
+            "@type": "xsd:string"
+        },
+        "公表_年月日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#公表_年月日",
+            "@type": "xsd:string"
+        },
+        "公開日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#公開日",
+            "@type": "xsd:string"
+        },
+        "公開終了日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#公開終了日",
+            "@type": "xsd:string"
+        },
+        "内容": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#内容",
+            "@type": "xsd:string"
+        },
+        "利用・申請方法": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#利用・申請方法",
+            "@type": "xsd:string"
+        },
+        "制度変更区分": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#制度変更区分",
+            "@type": "xsd:number"
+        },
+        "制度番号": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#制度番号",
+            "@type": "xsd:string"
+        },
+        "制度集": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#制度集",
+            "@type": "xsd:string"
+        },
+        "受付_年月日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#受付_年月日",
+            "@type": "xsd:string"
+        },
+        "受付備考": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#受付備考",
+            "@type": "xsd:string"
+        },
+        "受付終了日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#受付終了日",
+            "@type": "xsd:string"
+        },
+        "受付開始日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#受付開始日",
+            "@type": "xsd:string"
+        },
+        "完了_年月日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#完了_年月日",
+            "@type": "xsd:string"
+        },
+        "実施_年月日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#実施_年月日",
+            "@type": "xsd:string"
+        },
+        "実施組織・支援機関": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#実施組織・支援機関",
+            "@type": "xsd:string"
+        },
+        "対象地域": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#対象地域",
+            "@type": "xsd:string"
+        },
+        "対象地域群": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#対象地域群",
+            "@type": "xsd:string"
+        },
+        "対象者": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#対象者",
+            "@type": "xsd:string"
+        },
+        "市区町村名": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "患者_居住地": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_居住地",
+            "@type": "xsd:string"
+        },
+        "患者_年代": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_年代",
+            "@type": "xsd:string"
+        },
+        "患者_性別": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_性別",
+            "@type": "xsd:string"
+        },
+        "患者_渡航歴の有無フラグ": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_渡航歴の有無フラグ",
+            "@type": "xsd:number"
+        },
+        "患者_状態": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_状態",
+            "@type": "xsd:string"
+        },
+        "患者_症状": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_症状",
+            "@type": "xsd:string"
+        },
+        "患者_職業": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_職業",
+            "@type": "xsd:string"
+        },
+        "患者_退院済フラグ": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#患者_退院済フラグ",
+            "@type": "xsd:number"
+        },
+        "支援制度": "https://cio-context.fiware-testbed.jp/dataset#支援制度",
+        "根拠法令": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#根拠法令",
+            "@type": "xsd:string"
+        },
+        "検査実施_人数": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#検査実施_人数",
+            "@type": "xsd:number"
+        },
+        "検査実施_件数": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#検査実施_件数",
+            "@type": "xsd:number"
+        },
+        "検査実施人数": "https://cio-context.fiware-testbed.jp/dataset#検査実施人数",
+        "検査実施件数": "https://cio-context.fiware-testbed.jp/dataset#検査実施件数",
+        "概要": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#概要",
+            "@type": "xsd:string"
+        },
+        "標準産業分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#標準産業分類",
+            "@type": "xsd:string"
+        },
+        "法人番号": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#法人番号",
+            "@type": "xsd:string"
+        },
+        "災害名": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#災害名",
+            "@type": "xsd:string"
+        },
+        "用途・対象物": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#用途・対象物",
+            "@type": "xsd:string"
+        },
+        "発症_年月日": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#発症_年月日",
+            "@type": "xsd:string"
+        },
+        "相談件数": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#相談件数",
+            "@type": "xsd:number"
+        },
+        "詳細参照先": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#詳細参照先",
+            "@type": "xsd:string"
+        },
+        "都道府県名": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        },
+        "陰性確認_件数": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#陰性確認_件数",
+            "@type": "xsd:number"
+        },
+        "陰性確認数": "https://cio-context.fiware-testbed.jp/dataset#陰性確認数",
+        "陽性患者属性": "https://cio-context.fiware-testbed.jp/dataset#陽性患者属性",
+        "電子申請URL": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#電子申請URL",
+            "@type": "xsd:string"
+        },
+        "（事業者対象）お困りごと分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#（事業者対象）お困りごと分類",
+            "@type": "xsd:string"
+        },
+        "（事業者対象）事業ステージ分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#（事業者対象）事業ステージ分類",
+            "@type": "xsd:string"
+        },
+        "（事業者対象）行政サービス分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#（事業者対象）行政サービス分類",
+            "@type": "xsd:string"
+        },
+        "（個人対象）お困りごと分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#（個人対象）お困りごと分類",
+            "@type": "xsd:string"
+        },
+        "（個人対象）ライフステージ分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#（個人対象）ライフステージ分類",
+            "@type": "xsd:string"
+        },
+        "（個人対象）行政サービス分類": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#（個人対象）行政サービス分類",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#陽性患者属性",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "陽性患者属性"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#検査実施人数",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "検査実施人数"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#検査実施件数",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "検査実施件数"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#陰性確認数",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "陰性確認数"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#コールセンター相談件数",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "コールセンター相談件数"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#支援制度",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "支援制度"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        }
+    ]
+}

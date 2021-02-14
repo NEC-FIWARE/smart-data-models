@@ -1,0 +1,79 @@
+components:
+  schemas:
+    Covid19TestCount:
+      description: "PCR検査の実施数を日別に集計したデータ"
+      required:
+        - testedAt
+        - prefectureName
+        - cityName
+        - numberOfTestedPeople
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#Covid19TestCount
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        testedAt:
+          description: "検査を実施した年月日を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#testedAt
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        municipalityCode:
+          description: "総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#municipalityCode
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        prefectureName:
+          description: "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#prefectureName
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        cityName:
+          description: "情報の管理主体である地方公共団体名について、市区町村名を記載。※都道府県については記載不要。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#cityName
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        numberOfTests:
+          description: "検査を実施した件数を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: http://cio-context.fiware-testbed.jp/dataset#numberOfTests
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        remarks:
+          description: "備考があれば記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#remarks
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+info:
+  title: "新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  description: "Code for Japanにより策定された新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "コールセンター相談件数": "https://cio-context.fiware-testbed.jp/dataset#コールセンター相談件数",
+        "備考": "http://cio-context.fiware-testbed.jp/dataset#備考",
+        "全国地方公共団体コード": "http://cio-context.fiware-testbed.jp/dataset#全国地方公共団体コード",
+        "受付_年月日": "http://cio-context.fiware-testbed.jp/dataset#受付_年月日",
+        "市区町村名": "http://cio-context.fiware-testbed.jp/dataset#市区町村名",
+        "相談件数": "http://cio-context.fiware-testbed.jp/dataset#相談件数",
+        "都道府県名": "http://cio-context.fiware-testbed.jp/dataset#都道府県名"
+    }
+}

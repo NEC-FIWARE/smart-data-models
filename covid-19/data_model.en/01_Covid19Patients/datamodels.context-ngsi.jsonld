@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "Covid19Patients": "https://cio-context.fiware-testbed.jp/dataset#Covid19Patients",
+        "cityName": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+        "municipalityCode": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+        "patientAge": "http://cio-context.fiware-testbed.jp/dataset#patientAge",
+        "patientCondition": "http://cio-context.fiware-testbed.jp/dataset#patientCondition",
+        "patientDischarged": "http://cio-context.fiware-testbed.jp/dataset#patientDischarged",
+        "patientGender": "http://cio-context.fiware-testbed.jp/dataset#patientGender",
+        "patientNo": "http://cio-context.fiware-testbed.jp/dataset#patientNo",
+        "patientOccupation": "http://cio-context.fiware-testbed.jp/dataset#patientOccupation",
+        "patientResidence": "http://cio-context.fiware-testbed.jp/dataset#patientResidence",
+        "patientSymptoms": "http://cio-context.fiware-testbed.jp/dataset#patientSymptoms",
+        "patientTravelHistory": "http://cio-context.fiware-testbed.jp/dataset#patientTravelHistory",
+        "prefectureName": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+        "publishedAt": "http://cio-context.fiware-testbed.jp/dataset#publishedAt",
+        "remarks": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+        "symptomOnsetAt": "http://cio-context.fiware-testbed.jp/dataset#symptomOnsetAt"
+    }
+}

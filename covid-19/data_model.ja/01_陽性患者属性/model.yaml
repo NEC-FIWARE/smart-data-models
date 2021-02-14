@@ -1,0 +1,151 @@
+components:
+  schemas:
+    陽性患者属性:
+      description: 陽性患者の年代・性別・居住地等の属性情報を一覧化したデータ
+      required:
+        - 都道府県名
+        - 市区町村名
+        - 公表_年月日
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#陽性患者属性
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        No:
+          description: "患者を識別できるように、データセット内で一意に定まる番号を設定し記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#No
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        全国地方公共団体コード:
+          description: "総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#全国地方公共団体コード
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: "情報の管理主体である地方公共団体名について、市区町村名を記載。※都道府県については記載不要。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        公表_年月日:
+          description: "患者情報を公表した年月日を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#公表_年月日
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        発症_年月日:
+          description: "発症が確認された年月日を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#発症_年月日
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        患者_居住地:
+          description: "患者の居住地を記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_居住地
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        患者_年代:
+          description: "患者の年代を次のいずれかの値で記載。（不明やその他公開できない場合は空欄とする）{10歳未満, 10代, 20代, 30代, 40代, 50代, 60代, 70代, 80代, 90歳以上}"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_年代
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        患者_性別:
+          description: "患者の性別。次のいずれかの文字列で記載。（不明やその他公開できない場合は空欄とする）{男性, 女性, その他}"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_年代
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        患者_職業:
+          description: "患者の職業を記載。（不明やその他公開できない場合は空欄とする）"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_職業
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        患者_状態:
+          description: "患者の状態を次のいずれかの文字列で記載。（不明やその他公開できない場合は空欄とする）{無症状, 軽症, 中等症, 重症, 死亡}"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_職業
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        患者_症状:
+          description: "患者の症状を記載。複数ある場合は「;」（半角のセミコロン）区切りで記載する。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_症状
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        患者_渡航歴の有無フラグ:
+          description: "以下のいずれかの値を記載（数字は半角） 海外渡航歴あり：1 海外渡航歴なし：0 不明：（空のまま）"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_渡航歴の有無フラグ
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        患者_退院済フラグ:
+          description: "以下のいずれかの値を記載（数字は半角） 退院済：1 入院中：0 不明：（空のまま）"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: http://cio-context.fiware-testbed.jp/dataset#患者_退院済フラグ
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        備考:
+          description: "備考があれば記載。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+info:
+  title: "新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  description: "Code for Japanにより策定された新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

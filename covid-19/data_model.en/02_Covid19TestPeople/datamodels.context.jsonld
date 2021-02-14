@@ -1,0 +1,153 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Covid19TestPeople": "https://cio-context.fiware-testbed.jp/dataset#Covid19TestPeople",
+        "cityName": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+            "@type": "xsd:string"
+        },
+        "municipalityCode": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+            "@type": "xsd:string"
+        },
+        "numberOfTestedPeople": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#numberOfTestedPeople",
+            "@type": "xsd:number"
+        },
+        "prefectureName": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+            "@type": "xsd:string"
+        },
+        "remarks": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+            "@type": "xsd:string"
+        },
+        "testedAt": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#testedAt",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#Covid19TestPeople",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "PCR検査を受けた人の数を日別に集計したデータ"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Covid19TestPeople"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#testedAt",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "検査を実施した年月日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "testedAt"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "municipalityCode"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "prefectureName"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。※都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityName"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#numberOfTestedPeople",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "検査を受けた人の数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "numberOfTestedPeople"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "備考があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "remarks"
+                }
+            ]
+        }
+    ]
+}

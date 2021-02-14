@@ -1,0 +1,50 @@
+---
+components:
+  schemas:
+    Covid19Patients:
+      allOf:
+        - $ref: "./01_Covid19Patients/model.yaml#/components/schemas/Covid19Patients"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#Covid19Patients
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    Covid19TestPeople:
+      allOf:
+        - $ref: "./02_Covid19TestPeople/model.yaml#/components/schemas/Covid19TestPeople"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#Covid19TestPeople
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    Covid19TestCount:
+      allOf:
+        - $ref: "./03_Covid19TestCount/model.yaml#/components/schemas/Covid19TestCount"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#Covid19TestCount
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    Covid19ConfirmNegative:
+      allOf:
+        - $ref: "./04_Covid19ConfirmNegative/model.yaml#/components/schemas/Covid19ConfirmNegative"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#Covid19ConfirmNegative
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    Covid19CallCenter:
+      allOf:
+        - $ref: "./05_Covid19CallCenter/model.yaml#/components/schemas/Covid19CallCenter"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#Covid19CallCenter
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+info:
+  title: "新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  description: "Code for Japanにより策定された新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object
+

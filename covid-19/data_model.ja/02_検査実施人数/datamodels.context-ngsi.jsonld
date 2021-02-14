@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "備考": "http://cio-context.fiware-testbed.jp/dataset#備考",
+        "全国地方公共団体コード": "http://cio-context.fiware-testbed.jp/dataset#全国地方公共団体コード",
+        "実施_年月日": "http://cio-context.fiware-testbed.jp/dataset#実施_年月日",
+        "市区町村名": "http://cio-context.fiware-testbed.jp/dataset#市区町村名",
+        "検査実施_人数": "http://cio-context.fiware-testbed.jp/dataset#検査実施_人数",
+        "検査実施人数": "https://cio-context.fiware-testbed.jp/dataset#検査実施人数",
+        "都道府県名": "http://cio-context.fiware-testbed.jp/dataset#都道府県名"
+    }
+}

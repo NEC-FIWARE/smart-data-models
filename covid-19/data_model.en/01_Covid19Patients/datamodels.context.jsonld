@@ -1,0 +1,333 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Covid19Patients": "https://cio-context.fiware-testbed.jp/dataset#Covid19Patients",
+        "cityName": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+            "@type": "xsd:string"
+        },
+        "municipalityCode": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+            "@type": "xsd:string"
+        },
+        "patientAge": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientAge",
+            "@type": "xsd:string"
+        },
+        "patientCondition": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientCondition",
+            "@type": "xsd:string"
+        },
+        "patientDischarged": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientDischarged",
+            "@type": "xsd:number"
+        },
+        "patientGender": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientGender",
+            "@type": "xsd:string"
+        },
+        "patientNo": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientNo",
+            "@type": "xsd:string"
+        },
+        "patientOccupation": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientOccupation",
+            "@type": "xsd:string"
+        },
+        "patientResidence": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientResidence",
+            "@type": "xsd:string"
+        },
+        "patientSymptoms": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientSymptoms",
+            "@type": "xsd:string"
+        },
+        "patientTravelHistory": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientTravelHistory",
+            "@type": "xsd:number"
+        },
+        "prefectureName": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+            "@type": "xsd:string"
+        },
+        "publishedAt": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#publishedAt",
+            "@type": "xsd:string"
+        },
+        "remarks": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+            "@type": "xsd:string"
+        },
+        "symptomOnsetAt": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#symptomOnsetAt",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#Covid19Patients",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "陽性患者の年代・性別・居住地等の属性情報を一覧化したデータ"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Covid19Patients"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientNo",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者を識別できるように、データセット内で一意に定まる番号を設定し記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientNo"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "municipalityCode"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "prefectureName"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。※都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityName"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#publishedAt",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者情報を公表した年月日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "publishedAt"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#symptomOnsetAt",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "発症が確認された年月日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "symptomOnsetAt"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientResidence",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者の居住地を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientResidence"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientAge",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者の年代を次のいずれかの値で記載。（不明やその他公開できない場合は空欄とする）{10歳未満, 10代, 20代, 30代, 40代, 50代, 60代, 70代, 80代, 90歳以上}"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientAge"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientGender",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者の性別。次のいずれかの文字列で記載。（不明やその他公開できない場合は空欄とする）{男性, 女性, その他}"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientGender"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientOccupation",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者の職業を記載。（不明やその他公開できない場合は空欄とする）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientOccupation"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientCondition",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者の状態を次のいずれかの文字列で記載。（不明やその他公開できない場合は空欄とする）{無症状, 軽症, 中等症, 重症, 死亡}"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientCondition"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientSymptoms",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "患者の症状を記載。複数ある場合は「;」（半角のセミコロン）区切りで記載する。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientSymptoms"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientTravelHistory",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "以下のいずれかの値を記載（数字は半角） 海外渡航歴あり：1, 海外渡航歴なし：0,  不明：-1"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientTravelHistory"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#patientDischarged",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "以下のいずれかの値を記載（数字は半角） 退院済：1, 入院中：0, 不明：-1"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "patientDischarged"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "備考があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "remarks"
+                }
+            ]
+        }
+    ]
+}

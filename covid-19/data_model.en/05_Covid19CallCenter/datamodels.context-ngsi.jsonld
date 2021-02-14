@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "Covid19CallCenter": "https://cio-context.fiware-testbed.jp/dataset#Covid19CallCenter",
+        "acceptedAt": "http://cio-context.fiware-testbed.jp/dataset#acceptedAt",
+        "cityName": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+        "municipalityCode": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+        "numberOfCalls": "http://cio-context.fiware-testbed.jp/dataset#numberOfCalls",
+        "prefectureName": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+        "remarks": "http://cio-context.fiware-testbed.jp/dataset#remarks"
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Covid19ConfirmNegative": "https://cio-context.fiware-testbed.jp/dataset#Covid19ConfirmNegative",
+        "cityName": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+            "@type": "xsd:string"
+        },
+        "confirmedNegativeAt": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#confirmedNegativeAt",
+            "@type": "xsd:string"
+        },
+        "municipalityCode": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+            "@type": "xsd:string"
+        },
+        "numberOfNegatives": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#numberOfNegatives",
+            "@type": "xsd:number"
+        },
+        "prefectureName": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+            "@type": "xsd:string"
+        },
+        "remarks": {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#Covid19ConfirmNegative",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "陰性確認が完了した件数を日別に集計したデータ"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Covid19ConfirmNegative"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#confirmedNegativeAt",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "陰性確認が完了した年月日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "confirmedNegativeAt"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#municipalityCode",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "municipalityCode"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#prefectureName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "prefectureName"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#cityName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。※都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityName"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#numberOfNegatives",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "陰性確認が完了した件数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "numberOfNegatives"
+                }
+            ]
+        },
+        {
+            "@id": "http://cio-context.fiware-testbed.jp/dataset#remarks",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "備考があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "remarks"
+                }
+            ]
+        }
+    ]
+}

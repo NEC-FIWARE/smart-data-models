@@ -1,0 +1,310 @@
+components:
+  schemas:
+    支援制度:
+      description: "補助金や助成金、融資などの支援制度の情報を一覧化したデータ（※新型コロナウイルス感染症対策に限らず使用可能）"
+      required:
+        - タイトル（制度名）
+        - （事業者対象）事業ステージ分類
+        - （事業者対象）行政サービス分類
+        - （事業者対象）お困りごと分類
+        - （個人対象）ライフステージ分類
+        - （個人対象）行政サービス分類
+        - （個人対象）お困りごと分類
+        - キーワード
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#支援制度
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        制度番号:
+          description: "制度を識別するための番号を各地方公共団体で設定し入力する。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#制度番号
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        全国地方公共団体コード:
+          description: "総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#全国地方公共団体コード
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        法人番号:
+          description: "（支援制度情報の提供主体が法人の場合）法人番号（13桁）を入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#法人番号
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        元制度番号:
+          description: "国や都道府県の制度を元として地方公共団体が内容拡充したり名称変更した場合に、元となった制度の番号を入力。不明な場合は空欄とする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#元制度番号
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        制度変更区分:
+          description: "国や都道府県の制度を元として地方公共団体が内容拡充したり名称変更した場合に、どのような変更を行ったか、以下の3種類から選択して入力。 0: 分かりやすくする目的で内容を変えずに書き換えを実施 1: 元の内容に追記 2: 条件による詳細化"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: http://cio-context.fiware-testbed.jp/dataset#制度変更区分
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        タイトル（制度名）:
+          description: "支援制度のタイトル（制度名）を入力。40文字以内で、改行や半角カナは含めないようにする。（40文字を超えるときにはサブタイトルを活用）"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#タイトル（制度名）
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        サブタイトル（通称）:
+          description: "支援制度にサブタイトルがある場合に入力。40文字以内で、改行や半角カナは含めないようにする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#サブタイトル（通称）
+          type: string
+        対象者:
+          description: "支援制度の対象者の情報を500文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#対象者
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        用途・対象物:
+          description: "支援制度に用途や対象物に限定などがある場合に200文字以内で入力。「〇〇を除く」のように除外するものがある場合にも、この項目に入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#用途・対象物
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        対象地域:
+          description: "都道府県名を入力。市区町村限定の場合も属する都道府県名を入力する。複数都道府県が対象の場合、“;” （半角セミコロン）区切りで入力する。全都道府県の場合は空欄とする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#対象地域
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        対象地域群:
+          description: "市区町村名を入力。複数市区町村が対象の場合、“;” （半角セミコロン）区切りで入力する。都道府県下全域の場合は空欄とする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#対象地域群
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        概要:
+          description: "支援制度の概要を200文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#概要
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        内容:
+          description: "支援制度の内容（詳細）を5000文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#内容
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        利用・申請方法:
+          description: "利用・申請方法を500文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#利用・申請方法
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        受付開始日:
+          description: "受付開始の年月日を入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#受付開始日
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        受付終了日:
+          description: "受付終了の年月日を入力。未定や常時受付の場合は空欄とする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#受付終了日
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        受付備考:
+          description: "受付開始日、終了日に関する備考がある場合に入力。改行は含めないようにする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#受付備考
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        根拠法令:
+          description: "根拠法令名を500文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#根拠法令
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        詳細参照先:
+          description: "詳細情報を提供するWebページ等、詳細な参照先がある場合に、500文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#詳細参照先
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        実施組織・支援機関:
+          description: "実施機関・支援機関の名称を100文字以内で入力。複数機関がある場合には、“;” （半角セミコロン）区切りで入力する。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#実施組織・支援機関
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        お問い合わせ先:
+          description: "お問い合わせ先情報を1000文字以内で入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#お問い合わせ先
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        電子申請URL:
+          description: "電子申請が可能な場合はURLを入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#電子申請URL
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        標準産業分類:
+          description: "支援制度の対象となる産業が指定されている場合、標準産業分類の大分類または中分類のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する（上限：10個）。特に指定が無い場合は空欄とする。参照先シート：06-c1.標準産業分類"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#標準産業分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        （事業者対象）事業ステージ分類:
+          description: "支援制度が対象とする事業ステージが想定されている場合、事業ステージ分類のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する。参照先シート：06-c2.事業ステージ"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#（事業者対象）事業ステージ分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        （事業者対象）行政サービス分類:
+          description: "支援制度が提供する行政サービスの大分類または中分類のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する。参照先シート：06-c3.行政サービス"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#（事業者対象）行政サービス分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        （事業者対象）お困りごと分類:
+          description: "支援制度が想定している事業者の「お困りごと」のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する。参照先シート：06-c4.お困りごと"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#（事業者対象）お困りごと分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        （個人対象）ライフステージ分類:
+          description: "支援制度が対象とするライフステージが指定されている場合には、ライフステージ分類のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する。参照先シート：06-c5.ライフステージ"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#（個人対象）ライフステージ分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        （個人対象）行政サービス分類:
+          description: "支援制度が提供する行政サービス（個人向け）のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する。参照先シート：06-c6.行政サービス（個人）"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#（個人対象）行政サービス分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        （個人対象）お困りごと分類:
+          description: "支援制度が想定している個人利用者の「お困りごと」のコードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する。参照先シート：06-c7.お困りごと（個人）"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#（個人対象）お困りごと分類
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        災害名:
+          description: "災害に特化する制度である場合、災害名を入力。今回の新型コロナウイルス感染症の特別制度の場合は「新型コロナウイルス」と入力。複数の場合は “;” （半角セミコロン）区切りで入力する（上限：10個）。災害や今回の感染症対策以外で使える制度の場合は空欄とする。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#災害名
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        キーワード:
+          description: "支援制度を表すキーワードを入力。複数の場合は “;” （半角セミコロン）区切りで入力する（上限：5個）。1キーワードあたりの文字数は20文字まで。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#キーワード
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        制度集:
+          description: "紙で配布する制度集から転載したものは、制度集の名前を入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: http://cio-context.fiware-testbed.jp/dataset#制度集
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        公開日:
+          description: "情報を公開した年月日を入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#公開日
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        公開終了日:
+          description: "情報の公開を終了する予定の年月日を入力。"
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/DateTime
+            uri: http://cio-context.fiware-testbed.jp/dataset#公開終了日
+            uri-prefix: http://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+info:
+  title: "新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  description: "Code for Japanにより策定された新型コロナウイルス感染症対策に関するオープンデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object
