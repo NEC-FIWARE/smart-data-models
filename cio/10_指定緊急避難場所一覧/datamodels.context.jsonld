@@ -1,0 +1,426 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "NO": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "xsd:string"
+        },
+        "URL": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#URL",
+            "@type": "xs:anyURI"
+        },
+        "location": "https://cio-context.fiware-testbed.jp/dataset#location",
+        "住所": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "xsd:string"
+        },
+        "備考": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "内線番号": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#内線番号",
+            "@type": "xsd:string"
+        },
+        "名称": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称",
+            "@type": "xsd:string"
+        },
+        "名称_カナ": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_カナ",
+            "@type": "xsd:string"
+        },
+        "対象となる町会・自治会": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#対象となる町会・自治会",
+            "@type": "xsd:string"
+        },
+        "市区町村コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村コード",
+            "@type": "xsd:string"
+        },
+        "市区町村名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "想定収容人数": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#想定収容人数",
+            "@type": "xsd:string"
+        },
+        "指定緊急避難場所一覧": "https://cio-context.fiware-testbed.jp/dataset#指定緊急避難場所一覧",
+        "指定避難所との重複": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#指定避難所との重複",
+            "@type": "xsd:string"
+        },
+        "方書": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "xsd:string"
+        },
+        "標高": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#標高",
+            "@type": "xsd:number"
+        },
+        "災害種別_内水氾濫": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_内水氾濫",
+            "@type": "xsd:string"
+        },
+        "災害種別_地震": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_地震",
+            "@type": "xsd:string"
+        },
+        "災害種別_大規模な火事": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_大規模な火事",
+            "@type": "xsd:string"
+        },
+        "災害種別_崖崩れ、土石流及び地滑り": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_崖崩れ、土石流及び地滑り",
+            "@type": "xsd:string"
+        },
+        "災害種別_津波": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_津波",
+            "@type": "xsd:string"
+        },
+        "災害種別_洪水": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_洪水",
+            "@type": "xsd:string"
+        },
+        "災害種別_火山現象": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_火山現象",
+            "@type": "xsd:string"
+        },
+        "災害種別_高潮": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#災害種別_高潮",
+            "@type": "xsd:string"
+        },
+        "経度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "xsd:number"
+        },
+        "緯度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "xsd:number"
+        },
+        "都道府県名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        },
+        "電話番号": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#電話番号",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#指定緊急避難場所一覧",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村から提供される指定緊急避難場所の一覧。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所一覧"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "地方公共団体内で指定緊急避難場所が一意に決まるよう、NOを設定し、記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "NO"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の通称や建物等の名前を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_カナ",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の通称や建物等の名前をカナで記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称_カナ"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の住所を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "住所"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の住所の方書を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "方書"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の緯度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "緯度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の経度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "経度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#標高",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の標高をｍ単位で記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "標高"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#電話番号",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の連絡先（電話番号）を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "電話番号"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#内線番号",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所の連絡先（内線番号）を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "内線番号"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "設置主体である市区町村コードを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "設置主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "設置主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#想定収容人数",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所に収容可能な人数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "想定収容人数"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#対象となる町会・自治会",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所へ避難する対象の地域等を「;」（半角のセミコロン）区切りで記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "対象となる町会・自治会"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#URL",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "指定緊急避難場所のHPのURLを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "URL"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "特記事項等あれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "備考"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        }
+    ]
+}

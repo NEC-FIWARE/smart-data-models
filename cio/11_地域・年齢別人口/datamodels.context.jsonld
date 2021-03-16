@@ -1,0 +1,973 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "0-4歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#0-4歳の女性",
+            "@type": "xsd:number"
+        },
+        "0-4歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#0-4歳の男性",
+            "@type": "xsd:number"
+        },
+        "10-14歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#10-14歳の女性",
+            "@type": "xsd:number"
+        },
+        "10-14歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#10-14歳の男性",
+            "@type": "xsd:number"
+        },
+        "15-19歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#15-19歳の女性",
+            "@type": "xsd:number"
+        },
+        "15-19歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#15-19歳の男性",
+            "@type": "xsd:number"
+        },
+        "20-24歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#20-24歳の女性",
+            "@type": "xsd:number"
+        },
+        "20-24歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#20-24歳の男性",
+            "@type": "xsd:number"
+        },
+        "25-29歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#25-29歳の女性",
+            "@type": "xsd:number"
+        },
+        "25-29歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#25-29歳の男性",
+            "@type": "xsd:number"
+        },
+        "30-34歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#30-34歳の女性",
+            "@type": "xsd:number"
+        },
+        "30-34歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#30-34歳の男性",
+            "@type": "xsd:number"
+        },
+        "35-39歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#35-39歳の女性",
+            "@type": "xsd:number"
+        },
+        "35-39歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#35-39歳の男性",
+            "@type": "xsd:number"
+        },
+        "40-44歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#40-44歳の女性",
+            "@type": "xsd:number"
+        },
+        "40-44歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#40-44歳の男性",
+            "@type": "xsd:number"
+        },
+        "45-49歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#45-49歳の女性",
+            "@type": "xsd:number"
+        },
+        "45-49歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#45-49歳の男性",
+            "@type": "xsd:number"
+        },
+        "5-9歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#5-9歳の女性",
+            "@type": "xsd:number"
+        },
+        "5-9歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#5-9歳の男性",
+            "@type": "xsd:number"
+        },
+        "50-54歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#50-54歳の女性",
+            "@type": "xsd:number"
+        },
+        "50-54歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#50-54歳の男性",
+            "@type": "xsd:number"
+        },
+        "55-59歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#55-59歳の女性",
+            "@type": "xsd:number"
+        },
+        "55-59歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#55-59歳の男性",
+            "@type": "xsd:number"
+        },
+        "60-64歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#60-64歳の女性",
+            "@type": "xsd:number"
+        },
+        "60-64歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#60-64歳の男性",
+            "@type": "xsd:number"
+        },
+        "65-69歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#65-69歳の女性",
+            "@type": "xsd:number"
+        },
+        "65-69歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#65-69歳の男性",
+            "@type": "xsd:number"
+        },
+        "70-74歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#70-74歳の女性",
+            "@type": "xsd:number"
+        },
+        "70-74歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#70-74歳の男性",
+            "@type": "xsd:number"
+        },
+        "75-79歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#75-79歳の女性",
+            "@type": "xsd:number"
+        },
+        "75-79歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#75-79歳の男性",
+            "@type": "xsd:number"
+        },
+        "80-84歳の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#80-84歳の女性",
+            "@type": "xsd:number"
+        },
+        "80-84歳の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#80-84歳の男性",
+            "@type": "xsd:number"
+        },
+        "85歳以上の女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#85歳以上の女性",
+            "@type": "xsd:number"
+        },
+        "85歳以上の男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#85歳以上の男性",
+            "@type": "xsd:number"
+        },
+        "世帯数": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#世帯数",
+            "@type": "xsd:number"
+        },
+        "備考": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "地域コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#地域コード",
+            "@type": "xsd:string"
+        },
+        "地域・年齢別人口": "https://cio-context.fiware-testbed.jp/dataset#地域・年齢別人口",
+        "地域名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#地域名",
+            "@type": "xsd:string"
+        },
+        "女性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性",
+            "@type": "xsd:number"
+        },
+        "市区町村名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "男性": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性",
+            "@type": "xsd:number"
+        },
+        "総人口": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#総人口",
+            "@type": "xsd:number"
+        },
+        "調査年月日": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#調査年月日",
+            "@type": "xsd:string"
+        },
+        "都道府県コード又は市区町村コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "xsd:string"
+        },
+        "都道府県名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#地域・年齢別人口",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "住民基本台帳に基づく地域・年齢別の人口一覧。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "地域・年齢別人口"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県コード又は市区町村コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#地域コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "項目No.6「地域名」にて指定する地域について、地方公共団体にて管理する地域コードを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "地域コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#調査年月日",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "調査した西暦を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "調査年月日"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#地域名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "対象地域を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "地域名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#総人口",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "対象地域に居住する住民の総数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "総人口"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "対象地域に居住する住民の男性総数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "対象地域に居住する住民の女性総数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#0-4歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "0-4歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "0-4歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#0-4歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "0-4歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "0-4歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#5-9歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "5-9歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "5-9歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#5-9歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "5-9歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "5-9歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#10-14歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "10-14歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "10-14歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#10-14歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "10-14歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "10-14歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#15-19歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "15-19歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "15-19歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#15-19歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "15-19歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "15-19歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#20-24歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "20-24歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "20-24歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#20-24歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "20-24歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "20-24歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#25-29歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "25-29歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "25-29歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#25-29歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "25-29歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "25-29歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#30-34歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "30-34歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "30-34歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#30-34歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "30-34歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "30-34歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#35-39歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "35-39歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "35-39歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#35-39歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "35-39歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "35-39歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#40-44歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "40-44歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "40-44歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#40-44歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "40-44歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "40-44歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#45-49歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "45-49歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "45-49歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#45-49歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "45-49歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "45-49歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#50-54歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "50-54歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "50-54歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#50-54歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "50-54歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "50-54歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#55-59歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "55-59歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "55-59歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#55-59歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "55-59歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "55-59歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#60-64歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "60-64歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "60-64歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#60-64歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "60-64歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "60-64歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#65-69歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "65-69歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "65-69歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#65-69歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "65-69歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "65-69歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#70-74歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "70-74歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "70-74歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#70-74歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "70-74歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "70-74歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#75-79歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "75-79歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "75-79歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#75-79歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "75-79歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "75-79歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#80-84歳の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "80-84歳の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "80-84歳の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#80-84歳の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "80-84歳の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "80-84歳の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#85歳以上の男性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "85歳以上の男性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "85歳以上の男性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#85歳以上の女性",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "85歳以上の女性人口を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "85歳以上の女性"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#世帯数",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "世帯数を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "世帯数"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "特記事項等があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "備考"
+                }
+            ]
+        }
+    ]
+}

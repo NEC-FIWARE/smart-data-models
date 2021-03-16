@@ -1,0 +1,103 @@
+---
+components:
+  schemas:
+    AED設置箇所一覧:
+      allOf:
+        - $ref: "./01_AED設置箇所一覧/model.yaml#/components/schemas/AED設置箇所一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#AED設置箇所一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    介護サービス事業所一覧:
+      allOf:
+        - $ref: "./02_介護サービス事業所一覧/model.yaml#/components/schemas/介護サービス事業所一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#介護サービス事業所一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    医療機関一覧:
+      allOf:
+        - $ref: "./03_医療機関一覧/model.yaml#/components/schemas/医療機関一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#医療機関一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    文化財一覧:
+      allOf:
+        - $ref: "./04_文化財一覧/model.yaml#/components/schemas/文化財一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#文化財一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    観光施設一覧:
+      allOf:
+        - $ref: "./05_観光施設一覧/model.yaml#/components/schemas/観光施設一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#観光施設一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    イベント一覧:
+      allOf:
+        - $ref: "./06_イベント一覧/model.yaml#/components/schemas/イベント一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#イベント一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    公衆無線LANアクセスポイント一覧:
+      allOf:
+        - $ref: "./07_公衆無線LANアクセスポイント一覧/model.yaml#/components/schemas/公衆無線LANアクセスポイント一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#公衆無線LANアクセスポイント一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    公衆トイレ一覧:
+      allOf:
+        - $ref: "./08_公衆トイレ一覧/model.yaml#/components/schemas/公衆トイレ一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#公衆トイレ一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    消防水利施設一覧:
+      allOf:
+        - $ref: "./09_消防水利施設一覧/model.yaml#/components/schemas/消防水利施設一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#消防水利施設一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    指定緊急避難場所一覧:
+      allOf:
+        - $ref: "./10_指定緊急避難場所一覧/model.yaml#/components/schemas/指定緊急避難場所一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#指定緊急避難場所一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    地域・年齢別人口:
+      allOf:
+        - $ref: "./11_地域・年齢別人口/model.yaml#/components/schemas/地域・年齢別人口"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#地域・年齢別人口
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    公共施設一覧:
+      allOf:
+        - $ref: "./12_公共施設一覧/model.yaml#/components/schemas/公共施設一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#公共施設一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    子育て施設一覧:
+      allOf:
+        - $ref: "./13_子育て施設一覧/model.yaml#/components/schemas/子育て施設一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#子育て施設一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+    オープンデータ一覧:
+      allOf:
+        - $ref: "./14_オープンデータ一覧/model.yaml#/components/schemas/オープンデータ一覧"
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#オープンデータ一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

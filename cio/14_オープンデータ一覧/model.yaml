@@ -1,0 +1,174 @@
+components:
+  schemas:
+    オープンデータ一覧:
+      description: オープンデータ化されているデータセットの一覧。
+      required:
+      - データ名称
+      - データ形式
+      - 分類
+      - 最終更新日
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#オープンデータ一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        都道府県コード又は市区町村コード:
+          description: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        'NO':
+          description: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#NO
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        データ名称:
+          description: データセット名称を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#データ名称
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        データ概要:
+          description: データの内容について、概要を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#データ概要
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        データ形式:
+          description: データセットのファイル形式を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#データ形式
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        分類:
+          description: データの分類を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#分類
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 国土・気象
+          - 人口・世帯
+          - 労働・賃金
+          - 農林水産業
+          - 鉱工業
+          - 商業・サービス業
+          - 企業・家計・経済
+          - 住宅・土地・建設
+          - エネルギー・水
+          - 運輸・観光
+          - 情報通信・科学技術
+          - 教育・文化・スポーツ・生活
+          - 行財政
+          - 司法・安全・環境
+          - 社会保障・衛生
+          - 国際
+          - その他
+        更新頻度:
+          description: データセットの更新頻度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#更新頻度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        URL:
+          description: データセットのHPのURLを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/URL
+            uri: https://cio-context.fiware-testbed.jp/dataset#URL
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: uri
+        API対応有無:
+          description: API対応の有無を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#API対応有無
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 有
+          - 無
+        ライセンス:
+          description: ライセンスについて記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#ライセンス
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        登録日:
+          description: データセットの登録日を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Date
+            uri: https://cio-context.fiware-testbed.jp/dataset#登録日
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        最終更新日:
+          description: データセットの最終更新日を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Date
+            uri: https://cio-context.fiware-testbed.jp/dataset#最終更新日
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        備考:
+          description: 特記事項等があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

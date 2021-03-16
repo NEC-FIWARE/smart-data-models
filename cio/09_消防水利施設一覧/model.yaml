@@ -1,0 +1,136 @@
+components:
+  schemas:
+    消防水利施設一覧:
+      description: 消防水利施設の一覧。
+      required:
+      - 種別
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#消防水利施設一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        都道府県コード又は市区町村コード:
+          description: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        'NO':
+          description: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#NO
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        種別:
+          description: 消防水利施設の種類を記載。※記載内容について、「データ項目特記事項」シートの【09.消防水利施設一覧】を参照。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#種別
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 消火栓
+          - 私設消火栓
+          - 防火水そう
+          - プール
+          - 河川・溝等
+          - 濠・池等
+          - 海・湖
+          - 井戸
+          - 下水道
+          - その他
+        住所:
+          description: 消防水利施設の住所を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#住所
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        方書:
+          description: 消防水利施設の住所の方書を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#方書
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        緯度:
+          description: 消防水利施設の緯度を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#緯度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        経度:
+          description: 消防水利施設の経度を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#経度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        口径:
+          description: 消防水利施設が対応する口径をミリメートル単位で記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#口径
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        備考:
+          description: 特記事項があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        location:
+          description: location
+          x-ngsi:
+            attr-type: GeoProperty
+            model: https://schema.org/StructuredValue
+            uri: https://cio-context.fiware-testbed.jp/dataset#location
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: object
+          allOf:
+          - $ref: https://geojson.org/schema/Geometry.json
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

@@ -1,0 +1,33 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "FAX番号": "https://cio-context.fiware-testbed.jp/dataset#FAX番号",
+        "NO": "https://cio-context.fiware-testbed.jp/dataset#NO",
+        "URL": "https://cio-context.fiware-testbed.jp/dataset#URL",
+        "location": "https://cio-context.fiware-testbed.jp/dataset#location",
+        "事業所番号": "https://cio-context.fiware-testbed.jp/dataset#事業所番号",
+        "介護サービス事業所一覧": "https://cio-context.fiware-testbed.jp/dataset#介護サービス事業所一覧",
+        "介護サービス事業所名称": "https://cio-context.fiware-testbed.jp/dataset#介護サービス事業所名称",
+        "介護サービス事業所名称_カナ": "https://cio-context.fiware-testbed.jp/dataset#介護サービス事業所名称_カナ",
+        "住所": "https://cio-context.fiware-testbed.jp/dataset#住所",
+        "備考": "https://cio-context.fiware-testbed.jp/dataset#備考",
+        "内線番号": "https://cio-context.fiware-testbed.jp/dataset#内線番号",
+        "利用可能曜日": "https://cio-context.fiware-testbed.jp/dataset#利用可能曜日",
+        "利用可能曜日特記事項": "https://cio-context.fiware-testbed.jp/dataset#利用可能曜日特記事項",
+        "定員": "https://cio-context.fiware-testbed.jp/dataset#定員",
+        "実施サービス": "https://cio-context.fiware-testbed.jp/dataset#実施サービス",
+        "市区町村名": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+        "方書": "https://cio-context.fiware-testbed.jp/dataset#方書",
+        "法人の名称": "https://cio-context.fiware-testbed.jp/dataset#法人の名称",
+        "法人番号": "https://cio-context.fiware-testbed.jp/dataset#法人番号",
+        "経度": "https://cio-context.fiware-testbed.jp/dataset#経度",
+        "緯度": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+        "都道府県コード又は市区町村コード": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+        "都道府県名": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+        "電話番号": "https://cio-context.fiware-testbed.jp/dataset#電話番号"
+    }
+}

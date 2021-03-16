@@ -1,0 +1,714 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "NO": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "xsd:string"
+        },
+        "URL": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#URL",
+            "@type": "xs:anyURI"
+        },
+        "location": "https://cio-context.fiware-testbed.jp/dataset#location",
+        "住所": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "xsd:string"
+        },
+        "備考": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "内線番号": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#内線番号",
+            "@type": "xsd:string"
+        },
+        "利用可能日時特記事項": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用可能日時特記事項",
+            "@type": "xsd:string"
+        },
+        "利用可能曜日": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用可能曜日",
+            "@type": "xsd:string"
+        },
+        "名称": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称",
+            "@type": "xsd:string"
+        },
+        "名称_カナ": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_カナ",
+            "@type": "xsd:string"
+        },
+        "名称_英語": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_英語",
+            "@type": "xsd:string"
+        },
+        "名称_通称": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_通称",
+            "@type": "xsd:string"
+        },
+        "員数（単位）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#員数（単位）",
+            "@type": "xsd:string"
+        },
+        "員数（数）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#員数（数）",
+            "@type": "xsd:number"
+        },
+        "場所名称": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#場所名称",
+            "@type": "xsd:string"
+        },
+        "市区町村名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "所有者等": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#所有者等",
+            "@type": "xsd:string"
+        },
+        "文化財一覧": "https://cio-context.fiware-testbed.jp/dataset#文化財一覧",
+        "文化財分類": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#文化財分類",
+            "@type": "xsd:string"
+        },
+        "文化財指定日": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#文化財指定日",
+            "@type": "xsd:string"
+        },
+        "方書": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "xsd:string"
+        },
+        "概要": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#概要",
+            "@type": "xsd:string"
+        },
+        "概要_英語": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#概要_英語",
+            "@type": "xsd:string"
+        },
+        "法人番号": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#法人番号",
+            "@type": "xsd:string"
+        },
+        "画像": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像",
+            "@type": "xs:anyURI"
+        },
+        "画像_ライセンス": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像_ライセンス",
+            "@type": "xsd:string"
+        },
+        "種類": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#種類",
+            "@type": "xsd:string"
+        },
+        "終了時間": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#終了時間",
+            "@type": "xsd:string"
+        },
+        "経度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "xsd:number"
+        },
+        "緯度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "xsd:number"
+        },
+        "説明": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#説明",
+            "@type": "xsd:string"
+        },
+        "説明_英語": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#説明_英語",
+            "@type": "xsd:string"
+        },
+        "都道府県コード又は市区町村コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "xsd:string"
+        },
+        "都道府県名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        },
+        "開始時間": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#開始時間",
+            "@type": "xsd:string"
+        },
+        "電話番号": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#電話番号",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#文化財一覧",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "国もしくは地方公共団体が指定、登録、選定等を行った文化財についての一覧。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "文化財一覧"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県コード又は市区町村コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "NO"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の正式名称を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_カナ",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "名称をカナで記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称_カナ"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_通称",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の通称を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称_通称"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_英語",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "名称を英語で記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称_英語"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#文化財分類",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の分類を「;」（半角のセミコロン）区切りで記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "文化財分類"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#場所名称",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財が設置されている施設や建物などの名称を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "場所名称"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の住所を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "住所"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の住所の方書を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "方書"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の設置場所の緯度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "緯度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の設置場所の経度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "経度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#電話番号",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の問合せ先（電話番号）を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "電話番号"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#内線番号",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の問合せ先（内線番号）を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "内線番号"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#員数（数）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "当該文化財内の員数を数値部分のみ記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "員数（数）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#員数（単位）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "当該文化財内の員数の単位を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "員数（単位）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#法人番号",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の所有者・管理者・保護団体等の法人番号を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "法人番号"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#所有者等",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の所有者・管理者・保護団体等を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "所有者等"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#文化財指定日",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財として指定された指定日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "文化財指定日"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用可能曜日",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の利用可能曜日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "利用可能曜日"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#開始時間",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の開始時間（開館時間など）を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "開始時間"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#終了時間",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の終了時間（閉館時間など）を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "終了時間"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用可能日時特記事項",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "利用可能日時特記事項"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "画像の格納先URLを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "画像"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像_ライセンス",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "画像に対するライセンスについて記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "画像_ライセンス"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#概要",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の概要を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "概要"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#概要_英語",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の概要を英語で記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "概要_英語"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#説明",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の説明を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "説明"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#説明_英語",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財の説明を英語で記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "説明_英語"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#URL",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "文化財のWebサイトのURLを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "URL"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "特記事項があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "備考"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        }
+    ]
+}

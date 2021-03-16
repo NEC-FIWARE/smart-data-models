@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "NO": "https://cio-context.fiware-testbed.jp/dataset#NO",
+        "location": "https://cio-context.fiware-testbed.jp/dataset#location",
+        "住所": "https://cio-context.fiware-testbed.jp/dataset#住所",
+        "備考": "https://cio-context.fiware-testbed.jp/dataset#備考",
+        "口径": "https://cio-context.fiware-testbed.jp/dataset#口径",
+        "市区町村名": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+        "方書": "https://cio-context.fiware-testbed.jp/dataset#方書",
+        "消防水利施設一覧": "https://cio-context.fiware-testbed.jp/dataset#消防水利施設一覧",
+        "種別": "https://cio-context.fiware-testbed.jp/dataset#種別",
+        "経度": "https://cio-context.fiware-testbed.jp/dataset#経度",
+        "緯度": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+        "都道府県コード又は市区町村コード": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+        "都道府県名": "https://cio-context.fiware-testbed.jp/dataset#都道府県名"
+    }
+}

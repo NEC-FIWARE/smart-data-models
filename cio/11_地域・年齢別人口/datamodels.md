@@ -1,0 +1,152 @@
+# 地域・年齢別人口
+
+住民基本台帳に基づく地域・年齢別の人口一覧。
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `地域コード`: 項目No.6「地域名」にて指定する地域について、地方公共団体にて管理する地域コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `調査年月日`: 調査した西暦を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Required
+-  `地域名`: 対象地域を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `総人口`: 対象地域に居住する住民の総数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `男性`: 対象地域に居住する住民の男性総数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `女性`: 対象地域に居住する住民の女性総数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `0-4歳の男性`: 0-4歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `0-4歳の女性`: 0-4歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `5-9歳の男性`: 5-9歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `5-9歳の女性`: 5-9歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `10-14歳の男性`: 10-14歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `10-14歳の女性`: 10-14歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `15-19歳の男性`: 15-19歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `15-19歳の女性`: 15-19歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `20-24歳の男性`: 20-24歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `20-24歳の女性`: 20-24歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `25-29歳の男性`: 25-29歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `25-29歳の女性`: 25-29歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `30-34歳の男性`: 30-34歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `30-34歳の女性`: 30-34歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `35-39歳の男性`: 35-39歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `35-39歳の女性`: 35-39歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `40-44歳の男性`: 40-44歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `40-44歳の女性`: 40-44歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `45-49歳の男性`: 45-49歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `45-49歳の女性`: 45-49歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `50-54歳の男性`: 50-54歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `50-54歳の女性`: 50-54歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `55-59歳の男性`: 55-59歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `55-59歳の女性`: 55-59歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `60-64歳の男性`: 60-64歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `60-64歳の女性`: 60-64歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `65-69歳の男性`: 65-69歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `65-69歳の女性`: 65-69歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `70-74歳の男性`: 70-74歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `70-74歳の女性`: 70-74歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `75-79歳の男性`: 75-79歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `75-79歳の女性`: 75-79歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `80-84歳の男性`: 80-84歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `80-84歳の女性`: 80-84歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `85歳以上の男性`: 85歳以上の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `85歳以上の女性`: 85歳以上の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `世帯数`: 世帯数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `備考`: 特記事項等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+
+
+
+## Examples
+
+### OK
+
+
