@@ -1,0 +1,301 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "API対応有無": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#API対応有無",
+            "@type": "xsd:string"
+        },
+        "NO": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "xsd:string"
+        },
+        "URL": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#URL",
+            "@type": "xs:anyURI"
+        },
+        "オープンデータ一覧": "https://cio-context.fiware-testbed.jp/dataset#オープンデータ一覧",
+        "データ名称": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#データ名称",
+            "@type": "xsd:string"
+        },
+        "データ形式": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#データ形式",
+            "@type": "xsd:string"
+        },
+        "データ概要": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#データ概要",
+            "@type": "xsd:string"
+        },
+        "ライセンス": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#ライセンス",
+            "@type": "xsd:string"
+        },
+        "備考": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "分類": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#分類",
+            "@type": "xsd:string"
+        },
+        "市区町村名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "更新頻度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#更新頻度",
+            "@type": "xsd:string"
+        },
+        "最終更新日": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#最終更新日",
+            "@type": "xsd:string"
+        },
+        "登録日": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#登録日",
+            "@type": "xsd:string"
+        },
+        "都道府県コード又は市区町村コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "xsd:string"
+        },
+        "都道府県名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#オープンデータ一覧",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "オープンデータ化されているデータセットの一覧。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "オープンデータ一覧"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県コード又は市区町村コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "NO"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#データ名称",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データセット名称を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "データ名称"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#データ概要",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データの内容について、概要を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "データ概要"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#データ形式",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データセットのファイル形式を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "データ形式"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#更新頻度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データセットの更新頻度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "更新頻度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#URL",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データセットのHPのURLを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "URL"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#ライセンス",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "ライセンスについて記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "ライセンス"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#登録日",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データセットの登録日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "登録日"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#最終更新日",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "データセットの最終更新日を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "最終更新日"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "特記事項等があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "備考"
+                }
+            ]
+        }
+    ]
+}

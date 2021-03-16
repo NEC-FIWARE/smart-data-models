@@ -1,0 +1,116 @@
+# 文化財一覧
+
+国もしくは地方公共団体が指定、登録、選定等を行った文化財についての一覧。
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 文化財の正式名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 名称をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_通称`: 文化財の通称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称_英語`: 名称を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `文化財分類`: 文化財の分類を「;」（半角のセミコロン）区切りで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `種類`: 文化財の種類を記載。. One of : `建造物`, `美術工芸品`, `芸能`, `工芸技術`, `その他`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `場所名称`: 文化財が設置されている施設や建物などの名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 文化財の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `方書`: 文化財の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 文化財の設置場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 文化財の設置場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `電話番号`: 文化財の問合せ先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: 文化財の問合せ先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `員数（数）`: 当該文化財内の員数を数値部分のみ記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `員数（単位）`: 当該文化財内の員数の単位を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: 文化財の所有者・管理者・保護団体等の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `所有者等`: 文化財の所有者・管理者・保護団体等を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `文化財指定日`: 文化財として指定された指定日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Optional
+-  `利用可能曜日`: 文化財の利用可能曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始時間`: 文化財の開始時間（開館時間など）を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `終了時間`: 文化財の終了時間（閉館時間など）を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能日時特記事項`: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `画像`: 画像の格納先URLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `画像_ライセンス`: 画像に対するライセンスについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `概要`: 文化財の概要を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `概要_英語`: 文化財の概要を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明`: 文化財の説明を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明_英語`: 文化財の説明を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 文化財のWebサイトのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+## Examples
+
+### OK
+
+

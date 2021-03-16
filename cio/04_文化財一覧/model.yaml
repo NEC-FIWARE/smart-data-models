@@ -1,0 +1,322 @@
+components:
+  schemas:
+    文化財一覧:
+      description: 国もしくは地方公共団体が指定、登録、選定等を行った文化財についての一覧。
+      required:
+      - 名称
+      - 名称_カナ
+      - 文化財分類
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#文化財一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        都道府県コード又は市区町村コード:
+          description: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        'NO':
+          description: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#NO
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称:
+          description: 文化財の正式名称を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称_カナ:
+          description: 名称をカナで記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称_カナ
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称_通称:
+          description: 文化財の通称を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称_通称
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称_英語:
+          description: 名称を英語で記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称_英語
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        文化財分類:
+          description: 文化財の分類を「;」（半角のセミコロン）区切りで記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#文化財分類
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        種類:
+          description: 文化財の種類を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#種類
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 建造物
+          - 美術工芸品
+          - 芸能
+          - 工芸技術
+          - その他
+        場所名称:
+          description: 文化財が設置されている施設や建物などの名称を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#場所名称
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        住所:
+          description: 文化財の住所を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#住所
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        方書:
+          description: 文化財の住所の方書を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#方書
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        緯度:
+          description: 文化財の設置場所の緯度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#緯度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        経度:
+          description: 文化財の設置場所の経度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#経度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        電話番号:
+          description: 文化財の問合せ先（電話番号）を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#電話番号
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        内線番号:
+          description: 文化財の問合せ先（内線番号）を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#内線番号
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        員数（数）:
+          description: 当該文化財内の員数を数値部分のみ記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#員数（数）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        員数（単位）:
+          description: 当該文化財内の員数の単位を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#員数（単位）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        法人番号:
+          description: 文化財の所有者・管理者・保護団体等の法人番号を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#法人番号
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        所有者等:
+          description: 文化財の所有者・管理者・保護団体等を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#所有者等
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        文化財指定日:
+          description: 文化財として指定された指定日を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Date
+            uri: https://cio-context.fiware-testbed.jp/dataset#文化財指定日
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        利用可能曜日:
+          description: 文化財の利用可能曜日を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#利用可能曜日
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        開始時間:
+          description: 文化財の開始時間（開館時間など）を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Time
+            uri: https://cio-context.fiware-testbed.jp/dataset#開始時間
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: time
+        終了時間:
+          description: 文化財の終了時間（閉館時間など）を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Time
+            uri: https://cio-context.fiware-testbed.jp/dataset#終了時間
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: time
+        利用可能日時特記事項:
+          description: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#利用可能日時特記事項
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        画像:
+          description: 画像の格納先URLを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/URL
+            uri: https://cio-context.fiware-testbed.jp/dataset#画像
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: uri
+        画像_ライセンス:
+          description: 画像に対するライセンスについて記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#画像_ライセンス
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        概要:
+          description: 文化財の概要を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#概要
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        概要_英語:
+          description: 文化財の概要を英語で記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#概要_英語
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        説明:
+          description: 文化財の説明を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#説明
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        説明_英語:
+          description: 文化財の説明を英語で記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#説明_英語
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        URL:
+          description: 文化財のWebサイトのURLを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/URL
+            uri: https://cio-context.fiware-testbed.jp/dataset#URL
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: uri
+        備考:
+          description: 特記事項があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        location:
+          description: location
+          x-ngsi:
+            attr-type: GeoProperty
+            model: https://schema.org/StructuredValue
+            uri: https://cio-context.fiware-testbed.jp/dataset#location
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: object
+          allOf:
+          - $ref: https://geojson.org/schema/Geometry.json
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

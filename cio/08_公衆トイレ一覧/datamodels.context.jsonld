@@ -1,0 +1,642 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "NO": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "xsd:string"
+        },
+        "location": "https://cio-context.fiware-testbed.jp/dataset#location",
+        "オストメイト設置トイレ有無": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#オストメイト設置トイレ有無",
+            "@type": "xsd:string"
+        },
+        "乳幼児用設備設置トイレ有無": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#乳幼児用設備設置トイレ有無",
+            "@type": "xsd:string"
+        },
+        "住所": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "xsd:string"
+        },
+        "備考": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "公衆トイレ一覧": "https://cio-context.fiware-testbed.jp/dataset#公衆トイレ一覧",
+        "利用可能時間特記事項": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用可能時間特記事項",
+            "@type": "xsd:string"
+        },
+        "利用終了時間": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用終了時間",
+            "@type": "xsd:string"
+        },
+        "利用開始時間": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用開始時間",
+            "@type": "xsd:string"
+        },
+        "名称": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称",
+            "@type": "xsd:string"
+        },
+        "名称_カナ": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_カナ",
+            "@type": "xsd:string"
+        },
+        "名称_英語": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_英語",
+            "@type": "xsd:string"
+        },
+        "多機能トイレ数": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#多機能トイレ数",
+            "@type": "xsd:number"
+        },
+        "女性トイレ数（和式）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性トイレ数（和式）",
+            "@type": "xsd:number"
+        },
+        "女性トイレ数（洋式）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性トイレ数（洋式）",
+            "@type": "xsd:number"
+        },
+        "女性トイレ総数": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性トイレ総数",
+            "@type": "xsd:number"
+        },
+        "市区町村名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "方書": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "xsd:string"
+        },
+        "男女共用トイレ数（和式）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ数（和式）",
+            "@type": "xsd:number"
+        },
+        "男女共用トイレ数（洋式）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ数（洋式）",
+            "@type": "xsd:number"
+        },
+        "男女共用トイレ総数": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ総数",
+            "@type": "xsd:number"
+        },
+        "男性トイレ数（和式）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（和式）",
+            "@type": "xsd:number"
+        },
+        "男性トイレ数（小便器）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（小便器）",
+            "@type": "xsd:number"
+        },
+        "男性トイレ数（洋式）": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（洋式）",
+            "@type": "xsd:number"
+        },
+        "男性トイレ総数": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ総数",
+            "@type": "xsd:number"
+        },
+        "画像": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像",
+            "@type": "xs:anyURI"
+        },
+        "画像_ライセンス": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像_ライセンス",
+            "@type": "xsd:string"
+        },
+        "経度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "xsd:number"
+        },
+        "緯度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "xsd:number"
+        },
+        "設置位置": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#設置位置",
+            "@type": "xsd:string"
+        },
+        "車椅子使用者用トイレ有無": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#車椅子使用者用トイレ有無",
+            "@type": "xsd:string"
+        },
+        "都道府県コード又は市区町村コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "xsd:string"
+        },
+        "都道府県名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#公衆トイレ一覧",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの一覧。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレ一覧"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県コード又は市区町村コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "NO"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の通称や建物等の名前を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_カナ",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の通称や建物等の名前をカナで記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称_カナ"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#名称_英語",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の通称や建物等の名前を英語で記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "名称_英語"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の住所を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "住所"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の住所の方書を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "方書"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#設置位置",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの施設における詳細な設置位置を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "設置位置"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の緯度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "緯度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレの設置施設の経度を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "経度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ総数",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレの総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレ総数"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（小便器）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレの中で、小便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレ数（小便器）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（和式）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレ数（和式）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（洋式）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男性トイレ数（洋式）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性トイレ総数",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "女性トイレの総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "女性トイレ総数"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性トイレ数（和式）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "女性トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "女性トイレ数（和式）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#女性トイレ数（洋式）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "女性トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "女性トイレ数（洋式）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ総数",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男女共用トイレの総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男女共用トイレ総数"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ数（和式）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男女共用トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男女共用トイレ数（和式）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ数（洋式）",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "男女共用トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "男女共用トイレ数（洋式）"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#多機能トイレ数",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "多機能トイレ（注2）の総数を数字で記載。（便座単位）"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "多機能トイレ数"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用開始時間",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレが利用可能となる開始時間を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "利用開始時間"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用終了時間",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "公衆トイレが利用不可となる終了時間を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "利用終了時間"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#利用可能時間特記事項",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "利用開始時間、利用終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "利用可能時間特記事項"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "画像の格納先URLを記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "画像"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#画像_ライセンス",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "画像に対するライセンスについて記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "画像_ライセンス"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "特記事項があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "備考"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        }
+    ]
+}

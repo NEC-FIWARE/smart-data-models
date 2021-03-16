@@ -1,0 +1,287 @@
+components:
+  schemas:
+    指定緊急避難場所一覧:
+      description: 市区町村から提供される指定緊急避難場所の一覧。
+      required:
+      - 'NO'
+      - 名称
+      - 名称_カナ
+      - 住所
+      - 電話番号
+      - 市区町村コード
+      - 災害種別_洪水
+      - 災害種別_崖崩れ、土石流及び地滑り
+      - 災害種別_高潮
+      - 災害種別_地震
+      - 災害種別_津波
+      - 災害種別_大規模な火事
+      - 災害種別_内水氾濫
+      - 災害種別_火山現象
+      - 指定避難所との重複
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#指定緊急避難場所一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        'NO':
+          description: 地方公共団体内で指定緊急避難場所が一意に決まるよう、NOを設定し、記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#NO
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称:
+          description: 指定緊急避難場所の通称や建物等の名前を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称_カナ:
+          description: 指定緊急避難場所の通称や建物等の名前をカナで記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称_カナ
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        住所:
+          description: 指定緊急避難場所の住所を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#住所
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        方書:
+          description: 指定緊急避難場所の住所の方書を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#方書
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        緯度:
+          description: 指定緊急避難場所の緯度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#緯度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        経度:
+          description: 指定緊急避難場所の経度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#経度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        標高:
+          description: 指定緊急避難場所の標高をｍ単位で記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#標高
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        電話番号:
+          description: 指定緊急避難場所の連絡先（電話番号）を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#電話番号
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        内線番号:
+          description: 指定緊急避難場所の連絡先（内線番号）を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#内線番号
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村コード:
+          description: 設置主体である市区町村コードを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: 設置主体である地方公共団体名について、都道府県名を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: 設置主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        災害種別_洪水:
+          description: 指定緊急避難場所が対応している災害(火災)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_洪水
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_崖崩れ、土石流及び地滑り:
+          description: 指定緊急避難場所が対応している災害(崖崩れ、土石流及び地滑り)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_崖崩れ、土石流及び地滑り
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_高潮:
+          description: 指定緊急避難場所が対応している災害(高潮)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_高潮
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_地震:
+          description: 指定緊急避難場所が対応している災害(地震)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_地震
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_津波:
+          description: 指定緊急避難場所が対応している災害(津波)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_津波
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_大規模な火事:
+          description: 指定緊急避難場所が対応している災害(大規模な火事)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_大規模な火事
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_内水氾濫:
+          description: 指定緊急避難場所が対応している災害(内水氾濫)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_内水氾濫
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        災害種別_火山現象:
+          description: 指定緊急避難場所が対応している災害(火山現象)を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#災害種別_火山現象
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        指定避難所との重複:
+          description: 指定避難所との重複している施設の際に記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#指定避難所との重複
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - '1'
+          - ''
+        想定収容人数:
+          description: 指定緊急避難場所に収容可能な人数を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#想定収容人数
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        対象となる町会・自治会:
+          description: 指定緊急避難場所へ避難する対象の地域等を「;」（半角のセミコロン）区切りで記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#対象となる町会・自治会
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        URL:
+          description: 指定緊急避難場所のHPのURLを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/URL
+            uri: https://cio-context.fiware-testbed.jp/dataset#URL
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: uri
+        備考:
+          description: 特記事項等あれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        location:
+          description: location
+          x-ngsi:
+            attr-type: GeoProperty
+            model: https://schema.org/StructuredValue
+            uri: https://cio-context.fiware-testbed.jp/dataset#location
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: object
+          allOf:
+          - $ref: https://geojson.org/schema/Geometry.json
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

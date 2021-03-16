@@ -1,0 +1,254 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "NO": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "xsd:string"
+        },
+        "location": "https://cio-context.fiware-testbed.jp/dataset#location",
+        "住所": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "xsd:string"
+        },
+        "備考": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "xsd:string"
+        },
+        "口径": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#口径",
+            "@type": "xsd:number"
+        },
+        "市区町村名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "xsd:string"
+        },
+        "方書": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "xsd:string"
+        },
+        "消防水利施設一覧": "https://cio-context.fiware-testbed.jp/dataset#消防水利施設一覧",
+        "種別": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#種別",
+            "@type": "xsd:string"
+        },
+        "経度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "xsd:number"
+        },
+        "緯度": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "xsd:number"
+        },
+        "都道府県コード又は市区町村コード": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "xsd:string"
+        },
+        "都道府県名": {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#消防水利施設一覧",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設の一覧。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設一覧"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県コード又は市区町村コード"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#NO",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "NO"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#都道府県名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、都道府県名を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "都道府県名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#市区町村名",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "市区町村名"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#住所",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設の住所を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "住所"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#方書",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設の住所の方書を記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "方書"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#緯度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設の緯度を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "緯度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#経度",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設の経度を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "経度"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#口径",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "消防水利施設が対応する口径をミリメートル単位で記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "口径"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#備考",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "特記事項があれば記載。"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "備考"
+                }
+            ]
+        },
+        {
+            "@id": "https://cio-context.fiware-testbed.jp/dataset#location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        }
+    ]
+}

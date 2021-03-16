@@ -1,0 +1,1226 @@
+# AED設置箇所一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: AEDが設置場所の建物等の名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: AEDが設置場所の建物等の名称をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `住所`: AED設置場所の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: AED設置場所の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: AED設置場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: AED設置場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `設置位置`: AED設置場所における詳細位置を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `電話番号`: AED設置場所の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: AED設置場所の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: AED設置主体の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `団体名`: AED設置主体の名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `利用可能曜日`: AED設置場所が利用可能な曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始時間`: AED設置場所の開始時間（開館時間など）を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `終了時間`: AED設置場所の終了時間（閉館時間など）を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能日時特記事項`: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `小児対応設備の有無`: 小児対応設備の有無を記載。. One of : `有`, `無`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: AED設置場所に関する情報源を示すサイト等を記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 介護サービス事業所一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `介護サービス事業所名称`: 介護サービス事業所の名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `介護サービス事業所名称_カナ`: 介護サービス事業所の名称をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `実施サービス`: 実施サービスを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `住所`: 介護サービス事業所の設置場所の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 介護サービス事業所の設置場所の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 介護サービス事業所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 介護サービス事業所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `電話番号`: 介護サービス事業所の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `内線番号`: 介護サービス事業所の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `FAX番号`: 介護サービス事業所のFAX番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: 介護サービス事業所の運営主体の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人の名称`: 介護サービス事業所の運営主体の法人名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `事業所番号`: 介護サービス事業所の事業所番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `利用可能曜日`: 介護サービス事業所の利用可能な曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `利用可能曜日特記事項`: 利用可能曜日についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `定員`: サービスの定員を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `URL`: 介護サービス事業所のWebサイトを参照するURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 医療機関一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 医療機関の名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 医療機関の名称をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `医療機関の種類`: 医療機関の種類を記載。. One of : `病院`, `有床診療所`, `無床診療所`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `住所`: 医療機関の開設場所の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 医療機関の開設場所の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 医療機関の開設場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 医療機関の開設場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `電話番号`: 医療機関の連絡先（電場番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: 医療機関の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `FAX番号`: 医療機関のFAX番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: 医療機関の運営主体の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人の名称`: 医療機関の運営主体の法人名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `医療機関コード`: 医療機関の医療機関コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `診療曜日`: 医療機関の診療曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `診療開始時間`: 医療機関の診療開始時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Required
+-  `診療終了時間`: 医療機関の診療終了時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Required
+-  `診療日時特記事項`: 診療曜日、診療開始時間、診療終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `時間外における対応`: 医療機関の診療時間外における対応内容を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `診療科目`: 医療機関の診療科目を「;」（半角のセミコロン）区切りで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `病床数`: 医療機関の病床数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `URL`: 医療機関のWebサイトを参照するURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Required
+-  `備考`: 特記事項等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 文化財一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 文化財の正式名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 名称をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_通称`: 文化財の通称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称_英語`: 名称を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `文化財分類`: 文化財の分類を「;」（半角のセミコロン）区切りで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `種類`: 文化財の種類を記載。. One of : `建造物`, `美術工芸品`, `芸能`, `工芸技術`, `その他`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `場所名称`: 文化財が設置されている施設や建物などの名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 文化財の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `方書`: 文化財の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 文化財の設置場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 文化財の設置場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `電話番号`: 文化財の問合せ先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: 文化財の問合せ先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `員数（数）`: 当該文化財内の員数を数値部分のみ記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `員数（単位）`: 当該文化財内の員数の単位を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: 文化財の所有者・管理者・保護団体等の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `所有者等`: 文化財の所有者・管理者・保護団体等を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `文化財指定日`: 文化財として指定された指定日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Optional
+-  `利用可能曜日`: 文化財の利用可能曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始時間`: 文化財の開始時間（開館時間など）を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `終了時間`: 文化財の終了時間（閉館時間など）を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能日時特記事項`: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `画像`: 画像の格納先URLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `画像_ライセンス`: 画像に対するライセンスについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `概要`: 文化財の概要を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `概要_英語`: 文化財の概要を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明`: 文化財の説明を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明_英語`: 文化財の説明を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 文化財のWebサイトのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 観光施設一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 観光施設の通称や建物等の名前を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 観光施設の通称や建物等の名前をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_英語`: 観光施設の通称や建物等の名前を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `POIコード`: 観光施設のPOIコードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 観光施設の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 観光施設の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 観光施設の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 観光施設の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `利用可能曜日`: 観光施設が観光できる曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始時間`: 開始時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `終了時間`: 終了時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能日時特記事項`: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `料金(基本)`: 観光施設を観光するために必要な基本料金を日本円で記載。(1円単位)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `料金(詳細)`: 観光施設を観光するために必要な各種料金を日本円で記載。(1円単位)
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明`: 観光施設の説明を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `説明_英語`: 観光施設の説明を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `アクセス方法`: 観光施設への公共交通や車でのアクセス方法を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `駐車場情報`: 観光施設の駐車・駐輪スペースについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `バリアフリー情報`: バリアフリー情報を「;」（半角のセミコロン）区切りで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `連絡先名称`: 観光施設の管理者の問い合わせ先部署名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `連絡先電話番号`: 観光施設の管理者の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `連絡先内線番号`: 観光施設の管理者の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `画像`: 画像の格納先URLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `画像_ライセンス`: 画像に対するライセンスについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 観光施設のHPのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項等あれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# イベント一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `イベント名`: イベントの名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `イベント名_カナ`: イベントの名称をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `イベント名_英語`: イベントの名称を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始日`: イベントの開催日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Required
+-  `終了日`: イベントの開催日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Required
+-  `開始時間`: イベントの開始時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Required
+-  `終了時間`: イベントの終了時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Required
+-  `開始日時特記事項`: 開始日、終了日、開始時間、終了時間についての特記事項・例外等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明`: イベントの内容を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `料金(基本)`: イベントに参加するために必要な基本料金を日本円で記載。(1円単位)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `料金(詳細)`: イベントに参加するために必要な各種料金を日本円で記載。(1円単位)
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `連絡先名称`: イベントについての問合先を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `連絡先電話番号`: イベントについての連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `連絡先内線番号`: イベントについての連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `主催者`: イベントの主催者を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `場所名称`: イベントの会場を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `住所`: イベントの会場の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: イベントの会場の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: イベント会場の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: イベント会場の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `アクセス方法`: イベント会場への公共交通や車でのアクセス方法を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `駐車場情報`: イベント会場で指定されている駐車・駐輪スペースについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `定員`: イベントの募集人数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `参加申込終了日`: 申込締切日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Optional
+-  `参加申込終了時間`: 申込締切時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `参加申込方法`: 申込方法を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: イベントに関する情報源を示すサイト等を記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 公衆無線LANアクセスポイント一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 公衆無線LANの設置場所の通称や建物等の名前を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 公衆無線LANの設置場所の通称や建物等の名前をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_英語`: 公衆無線LANの設置場所の通称や建物等の名前を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 公衆無線LANの設置場所の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 公衆無線LANの設置場所の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 公衆無線LANの設置場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 公衆無線LANの設置場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `設置者`: 公衆無線LANの設置組織を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `電話番号`: 公衆無線LANの設置施設の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: 公衆無線LANの設置施設の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `SSID`: 公衆無線LANのSSIDを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `提供エリア`: 公衆無線LANの設置施設の施設内の提供エリアを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 公衆無線LANの設置施設のWebサイトのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項があれば記載。（利用条件等）
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 公衆トイレ一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 公衆トイレの設置施設の通称や建物等の名前を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 公衆トイレの設置施設の通称や建物等の名前をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_英語`: 公衆トイレの設置施設の通称や建物等の名前を英語で記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 公衆トイレの設置施設の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 公衆トイレの設置施設の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `設置位置`: 公衆トイレの施設における詳細な設置位置を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `緯度`: 公衆トイレの設置施設の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 公衆トイレの設置施設の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男性トイレ総数`: 男性トイレの総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男性トイレ数（小便器）`: 男性トイレの中で、小便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男性トイレ数（和式）`: 男性トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男性トイレ数（洋式）`: 男性トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `女性トイレ総数`: 女性トイレの総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `女性トイレ数（和式）`: 女性トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `女性トイレ数（洋式）`: 女性トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男女共用トイレ総数`: 男女共用トイレの総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男女共用トイレ数（和式）`: 男女共用トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `男女共用トイレ数（洋式）`: 男女共用トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `多機能トイレ数`: 多機能トイレ（注2）の総数を数字で記載。（便座単位）
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `車椅子使用者用トイレ有無`: 車椅子使用者用トイレの設置有無を記載。. One of : `有`, `無`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `乳幼児用設備設置トイレ有無`: 乳幼児用設備設置トイレの設置有無を記載。. One of : `有`, `無`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `オストメイト設置トイレ有無`: オストメイト設置トイレの設置有無を記載。. One of : `有`, `無`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `利用開始時間`: 公衆トイレが利用可能となる開始時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用終了時間`: 公衆トイレが利用不可となる終了時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能時間特記事項`: 利用開始時間、利用終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `画像`: 画像の格納先URLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `画像_ライセンス`: 画像に対するライセンスについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 消防水利施設一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `種別`: 消防水利施設の種類を記載。※記載内容について、「データ項目特記事項」シートの【09.消防水利施設一覧】を参照。. One of : `消火栓`, `私設消火栓`, `防火水そう`, `プール`, `河川・溝等`, `濠・池等`, `海・湖`, `井戸`, `下水道`, `その他`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `住所`: 消防水利施設の住所を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `方書`: 消防水利施設の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 消防水利施設の緯度を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 消防水利施設の経度を記載。※記載方法について、「データ項目特記事項」シートの【共通ルール】を参照。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `口径`: 消防水利施設が対応する口径をミリメートル単位で記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 指定緊急避難場所一覧
+
+
+-  `NO`: 地方公共団体内で指定緊急避難場所が一意に決まるよう、NOを設定し、記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称`: 指定緊急避難場所の通称や建物等の名前を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 指定緊急避難場所の通称や建物等の名前をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `住所`: 指定緊急避難場所の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 指定緊急避難場所の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 指定緊急避難場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 指定緊急避難場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `標高`: 指定緊急避難場所の標高をｍ単位で記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `電話番号`: 指定緊急避難場所の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `内線番号`: 指定緊急避難場所の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村コード`: 設置主体である市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `都道府県名`: 設置主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 設置主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `災害種別_洪水`: 指定緊急避難場所が対応している災害(火災)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_崖崩れ、土石流及び地滑り`: 指定緊急避難場所が対応している災害(崖崩れ、土石流及び地滑り)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_高潮`: 指定緊急避難場所が対応している災害(高潮)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_地震`: 指定緊急避難場所が対応している災害(地震)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_津波`: 指定緊急避難場所が対応している災害(津波)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_大規模な火事`: 指定緊急避難場所が対応している災害(大規模な火事)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_内水氾濫`: 指定緊急避難場所が対応している災害(内水氾濫)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `災害種別_火山現象`: 指定緊急避難場所が対応している災害(火山現象)を記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `指定避難所との重複`: 指定避難所との重複している施設の際に記載。. One of : `1`, ``.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `想定収容人数`: 指定緊急避難場所に収容可能な人数を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `対象となる町会・自治会`: 指定緊急避難場所へ避難する対象の地域等を「;」（半角のセミコロン）区切りで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 指定緊急避難場所のHPのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項等あれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 地域・年齢別人口
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `地域コード`: 項目No.6「地域名」にて指定する地域について、地方公共団体にて管理する地域コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `調査年月日`: 調査した西暦を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Required
+-  `地域名`: 対象地域を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `総人口`: 対象地域に居住する住民の総数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `男性`: 対象地域に居住する住民の男性総数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `女性`: 対象地域に居住する住民の女性総数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `0-4歳の男性`: 0-4歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `0-4歳の女性`: 0-4歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `5-9歳の男性`: 5-9歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `5-9歳の女性`: 5-9歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `10-14歳の男性`: 10-14歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `10-14歳の女性`: 10-14歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `15-19歳の男性`: 15-19歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `15-19歳の女性`: 15-19歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `20-24歳の男性`: 20-24歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `20-24歳の女性`: 20-24歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `25-29歳の男性`: 25-29歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `25-29歳の女性`: 25-29歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `30-34歳の男性`: 30-34歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `30-34歳の女性`: 30-34歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `35-39歳の男性`: 35-39歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `35-39歳の女性`: 35-39歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `40-44歳の男性`: 40-44歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `40-44歳の女性`: 40-44歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `45-49歳の男性`: 45-49歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `45-49歳の女性`: 45-49歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `50-54歳の男性`: 50-54歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `50-54歳の女性`: 50-54歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `55-59歳の男性`: 55-59歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `55-59歳の女性`: 55-59歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `60-64歳の男性`: 60-64歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `60-64歳の女性`: 60-64歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `65-69歳の男性`: 65-69歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `65-69歳の女性`: 65-69歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `70-74歳の男性`: 70-74歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `70-74歳の女性`: 70-74歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `75-79歳の男性`: 75-79歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `75-79歳の女性`: 75-79歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `80-84歳の男性`: 80-84歳の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `80-84歳の女性`: 80-84歳の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `85歳以上の男性`: 85歳以上の男性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `85歳以上の女性`: 85歳以上の女性人口を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Required
+-  `世帯数`: 世帯数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `備考`: 特記事項等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+
+
+
+# 公共施設一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 公共施設の名前を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 公共施設の名前をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_通称`: 公共施設の通称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `POIコード`: 公共施設のPOIコードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 公共施設の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 公共施設の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 公共施設の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 公共施設の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `電話番号`: 公共施設の管理者の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: 公共施設の管理者の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: 公共施設の管理団体の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `団体名`: 公共施設の管理団体の名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `利用可能曜日`: 公共施設が利用可能な曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始時間`: 開始時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `終了時間`: 終了時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能日時特記事項`: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `説明`: 公共施設の説明を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `バリアフリー情報`: バリアフリー情報を「;」（半角のセミコロン）区切りで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 公共施設のHPのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# 子育て施設一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `名称`: 子育て施設（注1）の通称や建物等の名前を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `名称_カナ`: 子育て施設の通称や建物等の名前をカナで記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `種別`: 子育て施設の種別を記載。. One of : `公立幼稚園`, `私立幼稚園`, `認可公立保育所`, `認可私立保育所`, `認可外保育所`, `認定こども園（幼保連携型）`, `認定こども園（幼稚園型）`, `認定こども園（保育所型）`, `認定こども園（地方裁量型）`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `住所`: 子育て施設の住所を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `方書`: 子育て施設の住所の方書を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `緯度`: 子育て施設の設置場所の緯度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `経度`: 子育て施設の設置場所の経度を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `アクセス方法`: 子育て施設への公共交通や車でのアクセス方法を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `駐車場情報`: 子育て施設の駐車・駐輪スペースについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `電話番号`: 子育て施設の連絡先（電話番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `内線番号`: 子育て施設の連絡先（内線番号）を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `FAX番号`: 子育て施設のFAX番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `法人番号`: 子育て施設の設置団体の法人番号を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `団体名`: 子育て施設の設置団体の名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `認可等年月日`: 認可又は認定をもらった時の年月日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Optional
+-  `収容定員`: 収容できる定員数を記載。
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `受入年齢`: 利用可能年齢を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `利用可能曜日`: 子育て施設の利用可能な曜日を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `開始時間`: 開始時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `終了時間`: 終了時間を記載。
+   -  Attribute type: **Property**. [Time](https://schema.org/Time)
+   -  Optional
+-  `利用可能日時特記事項`: 利用可能曜日、開始時間、終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `一時預かりの有無`: 一時預かりがあるかどうかを記載。. One of : `有`, `無`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: 施設のURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `備考`: 特記事項があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `location`: location
+   -  Attribute type: **Property**. [StructuredValue](https://schema.org/StructuredValue)
+   -  Optional
+
+
+
+# オープンデータ一覧
+
+
+-  `都道府県コード又は市区町村コード`: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `NO`: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `都道府県名`: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `市区町村名`: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `データ名称`: データセット名称を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `データ概要`: データの内容について、概要を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `データ形式`: データセットのファイル形式を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `分類`: データの分類を記載。. One of : `国土・気象`, `人口・世帯`, `労働・賃金`, `農林水産業`, `鉱工業`, `商業・サービス業`, `企業・家計・経済`, `住宅・土地・建設`, `エネルギー・水`, `運輸・観光`, `情報通信・科学技術`, `教育・文化・スポーツ・生活`, `行財政`, `司法・安全・環境`, `社会保障・衛生`, `国際`, `その他`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `更新頻度`: データセットの更新頻度を記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `URL`: データセットのHPのURLを記載。
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `API対応有無`: API対応の有無を記載。. One of : `有`, `無`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `ライセンス`: ライセンスについて記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `登録日`: データセットの登録日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Optional
+-  `最終更新日`: データセットの最終更新日を記載。
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Required
+-  `備考`: 特記事項等があれば記載。
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+
+
+
+## Examples
+
+### OK
+
+

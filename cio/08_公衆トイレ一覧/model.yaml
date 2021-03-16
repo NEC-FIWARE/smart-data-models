@@ -1,0 +1,312 @@
+components:
+  schemas:
+    公衆トイレ一覧:
+      description: 公衆トイレの一覧。
+      required:
+      - 名称
+      - 名称_カナ
+      - 住所
+      - 設置位置
+      - 多機能トイレ数
+      - 車椅子使用者用トイレ有無
+      - 乳幼児用設備設置トイレ有無
+      - オストメイト設置トイレ有無
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#公衆トイレ一覧
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        都道府県コード又は市区町村コード:
+          description: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        'NO':
+          description: 情報の管理主体である地方公共団体内でデータが一意に決まるよう、NOを設定し記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#NO
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称:
+          description: 公衆トイレの設置施設の通称や建物等の名前を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称_カナ:
+          description: 公衆トイレの設置施設の通称や建物等の名前をカナで記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称_カナ
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        名称_英語:
+          description: 公衆トイレの設置施設の通称や建物等の名前を英語で記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#名称_英語
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        住所:
+          description: 公衆トイレの設置施設の住所を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#住所
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        方書:
+          description: 公衆トイレの設置施設の住所の方書を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#方書
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        設置位置:
+          description: 公衆トイレの施設における詳細な設置位置を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#設置位置
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        緯度:
+          description: 公衆トイレの設置施設の緯度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#緯度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        経度:
+          description: 公衆トイレの設置施設の経度を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#経度
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男性トイレ総数:
+          description: 男性トイレの総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男性トイレ総数
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男性トイレ数（小便器）:
+          description: 男性トイレの中で、小便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（小便器）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男性トイレ数（和式）:
+          description: 男性トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（和式）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男性トイレ数（洋式）:
+          description: 男性トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男性トイレ数（洋式）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        女性トイレ総数:
+          description: 女性トイレの総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#女性トイレ総数
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        女性トイレ数（和式）:
+          description: 女性トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#女性トイレ数（和式）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        女性トイレ数（洋式）:
+          description: 女性トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#女性トイレ数（洋式）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男女共用トイレ総数:
+          description: 男女共用トイレの総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ総数
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男女共用トイレ数（和式）:
+          description: 男女共用トイレの中で、個室の和式便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ数（和式）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男女共用トイレ数（洋式）:
+          description: 男女共用トイレの中で、個室の様式便器の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男女共用トイレ数（洋式）
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        多機能トイレ数:
+          description: 多機能トイレ（注2）の総数を数字で記載。（便座単位）
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#多機能トイレ数
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        車椅子使用者用トイレ有無:
+          description: 車椅子使用者用トイレの設置有無を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#車椅子使用者用トイレ有無
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 有
+          - 無
+        乳幼児用設備設置トイレ有無:
+          description: 乳幼児用設備設置トイレの設置有無を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#乳幼児用設備設置トイレ有無
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 有
+          - 無
+        オストメイト設置トイレ有無:
+          description: オストメイト設置トイレの設置有無を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#オストメイト設置トイレ有無
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          enum:
+          - 有
+          - 無
+        利用開始時間:
+          description: 公衆トイレが利用可能となる開始時間を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Time
+            uri: https://cio-context.fiware-testbed.jp/dataset#利用開始時間
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: time
+        利用終了時間:
+          description: 公衆トイレが利用不可となる終了時間を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Time
+            uri: https://cio-context.fiware-testbed.jp/dataset#利用終了時間
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: time
+        利用可能時間特記事項:
+          description: 利用開始時間、利用終了時間についての特記事項・例外（祝日、年末年始の変更点など）等があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#利用可能時間特記事項
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        画像:
+          description: 画像の格納先URLを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/URL
+            uri: https://cio-context.fiware-testbed.jp/dataset#画像
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: uri
+        画像_ライセンス:
+          description: 画像に対するライセンスについて記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#画像_ライセンス
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        備考:
+          description: 特記事項があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        location:
+          description: location
+          x-ngsi:
+            attr-type: GeoProperty
+            model: https://schema.org/StructuredValue
+            uri: https://cio-context.fiware-testbed.jp/dataset#location
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: object
+          allOf:
+          - $ref: https://geojson.org/schema/Geometry.json
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object

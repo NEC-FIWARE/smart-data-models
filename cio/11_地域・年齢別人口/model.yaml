@@ -1,0 +1,444 @@
+components:
+  schemas:
+    地域・年齢別人口:
+      description: 住民基本台帳に基づく地域・年齢別の人口一覧。
+      required:
+      - 調査年月日
+      - 地域名
+      - 総人口
+      - 男性
+      - 女性
+      - 0-4歳の男性
+      - 0-4歳の女性
+      - 5-9歳の男性
+      - 5-9歳の女性
+      - 10-14歳の男性
+      - 10-14歳の女性
+      - 15-19歳の男性
+      - 15-19歳の女性
+      - 20-24歳の男性
+      - 20-24歳の女性
+      - 25-29歳の男性
+      - 25-29歳の女性
+      - 30-34歳の男性
+      - 30-34歳の女性
+      - 35-39歳の男性
+      - 35-39歳の女性
+      - 40-44歳の男性
+      - 40-44歳の女性
+      - 45-49歳の男性
+      - 45-49歳の女性
+      - 50-54歳の男性
+      - 50-54歳の女性
+      - 55-59歳の男性
+      - 55-59歳の女性
+      - 60-64歳の男性
+      - 60-64歳の女性
+      - 65-69歳の男性
+      - 65-69歳の女性
+      - 70-74歳の男性
+      - 70-74歳の女性
+      - 75-79歳の男性
+      - 75-79歳の女性
+      - 80-84歳の男性
+      - 80-84歳の女性
+      - 85歳以上の男性
+      - 85歳以上の女性
+      x-ngsi:
+        uri: https://cio-context.fiware-testbed.jp/dataset#地域・年齢別人口
+        uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+      type: object
+      properties:
+        都道府県コード又は市区町村コード:
+          description: 情報の管理主体である地方公共団体の都道府県コード又は市区町村コードを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県コード又は市区町村コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        地域コード:
+          description: 項目No.6「地域名」にて指定する地域について、地方公共団体にて管理する地域コードを記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#地域コード
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        都道府県名:
+          description: 情報の管理主体である地方公共団体名について、都道府県名を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#都道府県名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        市区町村名:
+          description: 情報の管理主体である地方公共団体名について、市区町村名を記載。都道府県については記載不要。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#市区町村名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        調査年月日:
+          description: 調査した西暦を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Date
+            uri: https://cio-context.fiware-testbed.jp/dataset#調査年月日
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+          format: date
+        地域名:
+          description: 対象地域を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#地域名
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+        総人口:
+          description: 対象地域に居住する住民の総数を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#総人口
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        男性:
+          description: 対象地域に居住する住民の男性総数を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        女性:
+          description: 対象地域に居住する住民の女性総数を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        0-4歳の男性:
+          description: 0-4歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#0-4歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        0-4歳の女性:
+          description: 0-4歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#0-4歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        5-9歳の男性:
+          description: 5-9歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#5-9歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        5-9歳の女性:
+          description: 5-9歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#5-9歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        10-14歳の男性:
+          description: 10-14歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#10-14歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        10-14歳の女性:
+          description: 10-14歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#10-14歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        15-19歳の男性:
+          description: 15-19歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#15-19歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        15-19歳の女性:
+          description: 15-19歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#15-19歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        20-24歳の男性:
+          description: 20-24歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#20-24歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        20-24歳の女性:
+          description: 20-24歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#20-24歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        25-29歳の男性:
+          description: 25-29歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#25-29歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        25-29歳の女性:
+          description: 25-29歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#25-29歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        30-34歳の男性:
+          description: 30-34歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#30-34歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        30-34歳の女性:
+          description: 30-34歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#30-34歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        35-39歳の男性:
+          description: 35-39歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#35-39歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        35-39歳の女性:
+          description: 35-39歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#35-39歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        40-44歳の男性:
+          description: 40-44歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#40-44歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        40-44歳の女性:
+          description: 40-44歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#40-44歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        45-49歳の男性:
+          description: 45-49歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#45-49歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        45-49歳の女性:
+          description: 45-49歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#45-49歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        50-54歳の男性:
+          description: 50-54歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#50-54歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        50-54歳の女性:
+          description: 50-54歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#50-54歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        55-59歳の男性:
+          description: 55-59歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#55-59歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        55-59歳の女性:
+          description: 55-59歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#55-59歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        60-64歳の男性:
+          description: 60-64歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#60-64歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        60-64歳の女性:
+          description: 60-64歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#60-64歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        65-69歳の男性:
+          description: 65-69歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#65-69歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        65-69歳の女性:
+          description: 65-69歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#65-69歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        70-74歳の男性:
+          description: 70-74歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#70-74歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        70-74歳の女性:
+          description: 70-74歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#70-74歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        75-79歳の男性:
+          description: 75-79歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#75-79歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        75-79歳の女性:
+          description: 75-79歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#75-79歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        80-84歳の男性:
+          description: 80-84歳の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#80-84歳の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        80-84歳の女性:
+          description: 80-84歳の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#80-84歳の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        85歳以上の男性:
+          description: 85歳以上の男性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#85歳以上の男性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        85歳以上の女性:
+          description: 85歳以上の女性人口を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#85歳以上の女性
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        世帯数:
+          description: 世帯数を記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Number
+            uri: https://cio-context.fiware-testbed.jp/dataset#世帯数
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: number
+        備考:
+          description: 特記事項等があれば記載。
+          x-ngsi:
+            attr-type: Property
+            model: https://schema.org/Text
+            uri: https://cio-context.fiware-testbed.jp/dataset#備考
+            uri-prefix: https://cio-context.fiware-testbed.jp/dataset#
+          type: string
+info:
+  title: "推奨データセット"
+  description: "政府CIOポータルで推奨データセットとして選定されたデータセットのデータ項目定義"
+  version: "1.0.0"
+openapi: "3.0.0"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          description:  OK
+          content:
+            application/ld+json:
+              schema:
+                type: object
